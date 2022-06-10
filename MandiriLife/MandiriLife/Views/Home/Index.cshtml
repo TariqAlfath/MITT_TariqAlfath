@@ -1,31 +1,400 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = null;
+
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title>AdminLTE 3 | DataTables</title>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../Plugins/fontawesome-free/css/all.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../Plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../Plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../Plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    @*preloader*@
+
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="@Url.Action("Index","Home")" class="nav-link">Home</a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
+
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="../index3.html" class="brand-link">
+                <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">AdminLTE 3</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Alexander Pierce</a>
+                    </div>
+                </div>
+
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                         with font-awesome or any other icon font library -->
+
+
+
+                        <li class="nav-header">EXAMPLES</li>
+                        <li class="nav-item">
+                            <a href="../kanban.html" class="nav-link">
+                                <i class="nav-icon fas fa-columns"></i>
+                                <p>
+                                    Profile
+                                </p>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>DataTables</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">DataTables</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+            <div class="preloader flex-column justify-content-center align-items-center">
+                <img src="~/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+
+            </div>
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6 col-md-6">
+                                            <h2>Master Profile</h2>
+                                        </div>
+                                        <div class="col-6 col-md-6" style="padding-left:38%">
+                                            <button onclick="" style="float:right" data-toggle="modal" data-target="#modalForm" class="form-control btn btn-primary"><i class="fa fa-plus"></i> Tambah</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-12 col-lg-12">
+                                            <table id="example2" class="table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Rendering engine</th>
+                                                        <th>Browser</th>
+                                                        <th>Platform(s)</th>
+                                                        <th>Engine version</th>
+                                                        <th>CSS grade</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+
+
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formInput" action="">
+                        <div class="form-group">
+                            <label for="exampleInputNama1">Nama :</label>
+                            <input required type="text" class="form-control" id="Nama" aria-describedby="NamaHelp" placeholder="Enter Nama">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="Alamat">Alamat :</label>
+                            <input required type="text" class="form-control" id="Alamat" aria-describedby="AlamatHelp" placeholder="Enter Alamat">
+                            <small id="AlamatHelp" class="form-text text-muted">We'll never share your Alamat with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal Lahir :</label>
+                            <input required type="date" class="form-control" id="TanggalLahir" placeholder="dd/MM//YYYY">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputNama1">Jenis Kelamin :</label>
+                            <select id="JenisKelamin" required class="form-control">
+                                <option value="">-Pilih-</option>
+                                <option value="Laki Laki">Laki Laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputNama1">Gambar :</label>
+                            <input required type="file" onchange="showImage.call(this)" class="form-control" id="Gambar" aria-describedby="NamaHelp" placeholder="Enter Nama">
+                        </div>
+                        <div class="form-group" style="float:right">
+                            <button type="submit" onclick="getImageBase64(document.getElementById('Gambar'));SaveData()" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="modal fade" id="ModalPhoto" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <div class="flex-column justify-content-center align-items-center">
+                                <center>
+                                    <img src="" class="mx-auto" id="TampilGambar" style="width:400px;height:300px;" />
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="../Plugins/jquery/jquery.min.js"></script>
+    <script src="https://malsup.github.io/jquery.blockUI.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../Plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="../Plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../Plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../Plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../Plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../Plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../Plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../Plugins/jszip/jszip.min.js"></script>
+    <script src="../Plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="../Plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="../Plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../Plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../Plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <script>
+        function SaveData() {
+            var Profile = {};
+            Profile.Nama = $("#Nama").val();
+            Profile.Alamat = $("#Alamat").val();
+            Profile.TanggalLahir = $("#TanggalLahir").val();
+            Profile.JenisKelamin = $("#JenisKelamin").val();
+            Profile.Foto = Gambar;
+            $.ajax({
+                type: "POST",
+                url: "@(Url.Action("addProfile","Home"))",
+                contentType: "application/json; charset=utf-8",
+                datatype: "json",
+                data: JSON.stringify({
+                    profile: Profile
+                }),
+                success: function (val) {
+                    initializeData();
+                    $('#ModalPhoto').modal('hide');
+                },
+                error: function () {
+
+                }
+            })
+        }
+
+        function initializeData() {
+            $.blockUI()
+            $('#example2').dataTable().fnClearTable();
+            $('#example2').dataTable().fnDestroy();
+            $("#example2").DataTable(
+                {
+                    "ajax": {
+                        "url": "@(Url.Action("GetAllUserProfile","Home"))",
+                        "type": "GET",
+                        "datatype": "json"
+                    },
+                    "columns": [
+                        {
+                            "data": "ProfileID", render: function (data, type, row) {
+                                return '<a href="#" onclick=showPhoto("' + row.Foto + '")>' + row.Nama + '</a>';
+                            }
+                        },
+                        { "data": "Nama" },
+                        { "data": "Alamat" },
+                        { "data": "TanggalLahir" },
+                        { "data": "JenisKelamin" }
+                    ]
+
+                });
+            $.unblockUI();
+        }
+        $("#formInput").submit(function (event) {
+
+            event.preventDefault();
+        });
+        $('#modalForm').on('hidden.bs.modal', function (e) {
+            
+        })
+
+        function getImageBase64() {
+
+            var base64Image = Gambar;
+                var sub = base64Image.split(',')[1];
+                Gambar = sub;
+
+                if (!base64Image.startsWith("data:image")) {
+                    alert('Attachment harus diisi !');
+                }
+
+
+        }
+        var cek = ''
+        function showImage() {
+            if (this.files && this.files[0]) {
+                var tpData = this.files[0].type
+                cek = tpData;
+
+                //image/jpeg
+                //alert(filePDF);
+                if (this.files[0].type != 'image/jpeg') {
+                    alert('Masukan gambar dengan format JPG/JPEG');
+                    this.files[0] = "";
+
+                }
+                else {
+
+                    if (this.files[0].size > 2200000) {
+                        alert('Mencapai file maksimum !');
+                        return;
+                    }
+                    console.log(cek);
+                    var obj = new FileReader();
+                    obj.onload = function (data) {
+                        Gambar = data.target.result;
+                    }
+
+
+                }
+                obj.readAsDataURL(this.files[0]);
+
+            }
+        }
+
+        function showPhoto(src) {
+            $('#ModalPhoto').modal('toggle');
+            $('#ModalPhoto').modal('show');
+            $('#TampilGambar').attr("src", "data:image/png;base64, "+src);
+        }
+    </script>
