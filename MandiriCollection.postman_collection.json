@@ -1,0 +1,539 @@
+{
+	"info": {
+		"_postman_id": "9b631a28-3567-4580-99fa-6c184ab8021a",
+		"name": "MandiriCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18732925"
+	},
+	"item": [
+		{
+			"name": "LoginRequest_GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/Login?username=admin&password=admin",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"Login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterRequest_POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/Register?username.username&name&address&bod&email",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"Register"
+					],
+					"query": [
+						{
+							"key": "username.username",
+							"value": null
+						},
+						{
+							"key": "name",
+							"value": null
+						},
+						{
+							"key": "address",
+							"value": null
+						},
+						{
+							"key": "bod",
+							"value": null
+						},
+						{
+							"key": "email",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUserRequest_POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/Update?username.username&name&address&bod&email",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"Update"
+					],
+					"query": [
+						{
+							"key": "username.username",
+							"value": null
+						},
+						{
+							"key": "name",
+							"value": null
+						},
+						{
+							"key": "address",
+							"value": null
+						},
+						{
+							"key": "bod",
+							"value": null
+						},
+						{
+							"key": "email",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSkills_GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/GetSkills",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"GetSkills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSkillById_GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/GetSkill?skillID",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"GetSkill"
+					],
+					"query": [
+						{
+							"key": "skillID",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateSkill_POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/CreateSkill?skillName",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"CreateSkill"
+					],
+					"query": [
+						{
+							"key": "skillName",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateSkill_POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/UpdateSkill?skillID&skillName",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"UpdateSkill"
+					],
+					"query": [
+						{
+							"key": "skillID",
+							"value": null
+						},
+						{
+							"key": "skillName",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteSkill_POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/DeleteSkill?skillID",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"DeleteSkill"
+					],
+					"query": [
+						{
+							"key": "skillID",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSkillLevel_GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/GetSkillsLevel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"GetSkillsLevel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSkillsLevelByID_GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/GetSkillsLevelByID?skillLevelID",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"GetSkillsLevelByID"
+					],
+					"query": [
+						{
+							"key": "skillLevelID",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateSkillLevel_POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/CreateSkillLevel?skillLevelName",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"CreateSkillLevel"
+					],
+					"query": [
+						{
+							"key": "skillLevelName",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateSkillLevel_POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/UpdateSkillLevel?skillID=3&skillLevelName=Expert",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"UpdateSkillLevel"
+					],
+					"query": [
+						{
+							"key": "skillID",
+							"value": "3"
+						},
+						{
+							"key": "skillLevelName",
+							"value": "Expert"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteSkillLevel_POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/DeleteSkillLevel?skillLevelID",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"DeleteSkillLevel"
+					],
+					"query": [
+						{
+							"key": "skillLevelID",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserkills_GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/GetUserkills?userSkillID",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"GetUserkills"
+					],
+					"query": [
+						{
+							"key": "userSkillID",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUserkills_GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/GetAllUserkills",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"GetAllUserkills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUserSkills_POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/CreateUserSkills?username.username&skillID.skillID&skillLevelID.skillLevelID",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"CreateUserSkills"
+					],
+					"query": [
+						{
+							"key": "username.username",
+							"value": null
+						},
+						{
+							"key": "skillID.skillID",
+							"value": null
+						},
+						{
+							"key": "skillLevelID.skillLevelID",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUserSkills_POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/UpdateUserSkills?userSkillID.userSkillID&username.username&skillID.skillID&skillLevelID.skillLevelID",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"UpdateUserSkills"
+					],
+					"query": [
+						{
+							"key": "userSkillID.userSkillID",
+							"value": null
+						},
+						{
+							"key": "username.username",
+							"value": null
+						},
+						{
+							"key": "skillID.skillID",
+							"value": null
+						},
+						{
+							"key": "skillLevelID.skillLevelID",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUserSkills_POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44395/api/DeleteUserSkills?UserSkillsID",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44395",
+					"path": [
+						"api",
+						"DeleteUserSkills"
+					],
+					"query": [
+						{
+							"key": "UserSkillsID",
+							"value": null
+						},
+						{
+							"key": "username.username",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "skillID.skillID",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "skillLevelID.skillLevelID",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
