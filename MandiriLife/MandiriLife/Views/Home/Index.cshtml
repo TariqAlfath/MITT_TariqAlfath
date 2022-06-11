@@ -217,24 +217,7 @@
                             <input required type="text" class="form-control" id="Alamat" aria-describedby="AlamatHelp" placeholder="Enter Alamat">
                             <small id="AlamatHelp" class="form-text text-muted">We'll never share your Alamat with anyone else.</small>
                         </div>
-                        <div class="form-group">
-                            <label>Tanggal Lahir :</label>
-                            <input required type="date" class="form-control" id="TanggalLahir" placeholder="dd/MM//YYYY">
-
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputNama1">Jenis Kelamin :</label>
-                            <select id="JenisKelamin" required class="form-control">
-                                <option value="">-Pilih-</option>
-                                <option value="Laki Laki">Laki Laki</option>
-                                <option value="Perempuan">Perempuan</option>
-                            </select>
-
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputNama1">Gambar :</label>
-                            <input required type="file" onchange="showImage.call(this)" class="form-control" id="Gambar" aria-describedby="NamaHelp" placeholder="Enter Nama">
-                        </div>
+                        
                         <div class="form-group" style="float:right">
                             <button type="submit" onclick="getImageBase64(document.getElementById('Gambar'));SaveData()" class="btn btn-primary">Save changes</button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

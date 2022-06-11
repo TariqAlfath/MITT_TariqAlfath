@@ -77,3 +77,5 @@ C:\Users\alfat\Documents\MyProject\MITT_TariqAlfath\MandiriLife\MandiriLife\obj\
 C:\Users\alfat\Documents\MyProject\MITT_TariqAlfath\MandiriLife\MandiriLife\obj\Debug\MandiriLife.csproj.CopyComplete
 C:\Users\alfat\Documents\MyProject\MITT_TariqAlfath\MandiriLife\MandiriLife\obj\Debug\MandiriLife.dll
 C:\Users\alfat\Documents\MyProject\MITT_TariqAlfath\MandiriLife\MandiriLife\obj\Debug\MandiriLife.pdb
+C:\Users\alfat\Documents\MyProject\MITT_TariqAlfath\MandiriLife\MandiriLife\bin\Dapper.dll
+C:\Users\alfat\Documents\MyProject\MITT_TariqAlfath\MandiriLife\MandiriLife\bin\Dapper.xml
